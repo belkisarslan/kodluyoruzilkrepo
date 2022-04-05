@@ -1,4 +1,122 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
     background-color: cadetblue;
+    background-size: cover;
+    
+}
+.header {
+    height: 80px;
+    background-color: #fff;
+    margin: 4px;
+    padding-top: 14px;
+    border-radius: 8px;
+    text-align: center;
+    color: darkcyan;
+    border: 1px solid darkcyan;
+    
+}
+.navbar {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff; 
+}
+  
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: darkcyan;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+  
+.subnav .subnavbtn {
+    font-size: 20px;  
+    border: none;
+    outline: none;
+    color: darkcyan;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+}
+  
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: darkcyan;
     color: #fff;
+    border-radius: 4px;
+}
+  
+.subnav-content {
+    display: none;
+    left: 0;
+    background-color: darkcyan;
+    border-radius: 8px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+}
+  
+.subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+  
+.subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+}
+  
+.subnav:hover .subnav-content {
+    display: block;
+}
+h2 {
+    color: darkcyan;
+}
+.container-class {
+    height: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 40px;
+}
+.tablink {
+    background-color: #fff;
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 20px;
+    width: 25%;
+}
+  
+.tablink:hover {
+    background-color: darkorange;
+    color: #fff;
+}
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+  
+#week,#topics,#work,#test {background-color: darkcyan;}
+  
+.container-class a {
+   text-decoration: none;
+   color: #fff;
+}
+.container-class a:hover {
+    background-color: darkgoldenrod;
 }

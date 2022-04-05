@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +8,73 @@
     <title>Kodluyoruz Ödev</title>
 </head>
 <body>
-    <h1>Kodluyoruz İlk Html Ödevi</h1>
-    <h2>Bu hafta neler öğrendik?</h2>
-    <ol>
-        <li>HTML'e giriş yaptık</li>
-        <li>Başlıkları öğrendik</li>
-        <li>Sıralı ve Sırasız Listeleri öğrendik</li>
-    </ol>
-    
+   <div class="header">
+    <h1>Bugün Öğrendiklerim</h1>
+    <h2>Kodluyoruz ilk ödev</h2>
+   </div>
+   <div class="navbar">
+    <a href="#">Anasayfa</a>
+    <div class="subnav">
+      <button class="subnavbtn">İletişim <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div> 
+    <div class="subnav">
+      <button class="subnavbtn">Konular <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JS</a>
+        <a href="#">.NET</a>
+      </div>
+    </div> 
+    <div class="subnav">
+      <button class="subnavbtn">Ödevler <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="#link1">Link 1</a>
+        <a href="#link2">Link 2</a>
+        <a href="#link3">Link 3</a>
+        <a href="#link4">Link 4</a>
+      </div>
+    </div>
+</div>
+
+<div class="container-class">
+    <button class="tablink" onclick="openPage('week', this, 'darkcyan')">Bu hafta</button>
+    <button class="tablink" onclick="openPage('topics', this, 'darkcyan')" id="defaultOpen">Konular</button>
+    <button class="tablink" onclick="openPage('work', this, 'darkcyan')">Ödevler</button>
+    <button class="tablink" onclick="openPage('test', this, 'darkcyan')">Testler</button>
+
+<div id="week" class="tabcontent">
+    <h3>Bu hafta</h3>
+    <p>Bu haftanın konuları, ödevleri ve testleri bu sayfada yer almaktadır.</p>
+</div>
+
+<div id="topics" class="tabcontent">
+    <h3>Konular</h3>
+    <p>Konu anlatım için linke tıklayınız!</p>
+    <i class="far fa-hand-point-right"></i> <a href="#">Konu anlatım</a> 
+</div>
+
+<div id="work" class="tabcontent">
+    <h3>Ödevler</h3>
+    <p>Bu haftanın ödevleri için tıklayınız!</p>
+    <i class="far fa-hand-point-right"></i> <a href="#">Ödevler</a> 
+</div>
+
+<div id="test" class="tabcontent">
+    <h3>Testler</h3>
+    <p>Şimdi test zamanı!</p>
+    <i class="far fa-hand-point-right"></i> <a href="#">Testler</a> 
+</div>
+</div>
+
+
+    <script src="https://kit.fontawesome.com/64243cc85f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
