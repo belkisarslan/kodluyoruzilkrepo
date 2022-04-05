@@ -34,4 +34,11 @@ Pull requestler kabul edilir. Büyük değişiklikler için, lütfen önce neyi 
 
 <img src="ilkrepo.png">
 
+<hr>
+
+*İlk HTML ödevinin görselini bu kısma ekledim.*
+
+<img src="ilkhtmlödevi.png">
+
+Patika profilim: https://app.patika.dev/belkisarslan
 
