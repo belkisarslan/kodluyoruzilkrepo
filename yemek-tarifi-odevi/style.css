@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: khaki;
+    color: chocolate;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    padding: 10px 0 0 50px;
+}
+section{
+    padding: 10px 0 0 50px;
+    height: 300px;
+}
+h2{
+    padding-bottom: 5px;
+}
+.material, .cooking{
+    width: 900px;
+    height: 200px;
+}
+.material img{
+    float: left;
+    padding-right: 30px;
+}
+.cooking img{
+    float: left;
+    padding-right: 30px;
+}
+span{
+    text-decoration: underline;
+}
+
