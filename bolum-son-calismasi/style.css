@@ -1,0 +1,30 @@
+body{
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+header{
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    border-radius: 10px;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    
+}
+.navbar li{
+    padding-right: 12px;
+    float: left;
+    list-style-type: none;
+    
+}
+.navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.navbar li a:hover{
+    color: orange;
+    transition: .5s;
+}
+
