@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://picsum.photos/id/529/1200/600?grayscale&blur=2);
+    background-size: cover;
+}
+.small-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 50px auto;
+}
+input, button{
+    padding: 5px;
+}
+input{
+    width: 200px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: large;
+}
+button{
+    background-color: rgb(226, 64, 64);
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 80px;
+    cursor: pointer;
+}
+#submit{
+    cursor: pointer;
+    background-color: orange;
+    color: #fff;
+}
+h1, h2, ul{
+    color: orange;
+}
+ul{
+    background-color: #fff;
+    list-style-type: none;
+    font-size: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
