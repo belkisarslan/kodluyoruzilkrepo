@@ -3,6 +3,7 @@ const ul = document.querySelector('ul');
 const button = document.querySelector('button');
 const input = document.getElementById('item');
 let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+const message = document.querySelector('.message');
 
 localStorage.setItem('items', JSON.stringify(itemsArray));
 const data = JSON.parse(localStorage.getItem('items'));
@@ -13,9 +14,13 @@ const liMaker = (text) => {
   ul.appendChild(li);
 }
 
+
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-
+  const task = item.value;
+  if(task === ''){
+    showError('Film Girmediniz');
+  }
   itemsArray.push(input.value);
   localStorage.setItem('items', JSON.stringify(itemsArray));
   liMaker(input.value);
@@ -33,3 +38,14 @@ button.addEventListener('click', function () {
   }
   itemsArray = [];
 });
+
+function showError(error){
+  const messageError = document.createElement('p');
+  messageError.textContent = error;
+  messageError.classList.add('error');
+  message.appendChild(messageError);
+  setTimeout(() => {
+      messageError.remove();
+  },1000);
+  message.style.color = "red"
+}
