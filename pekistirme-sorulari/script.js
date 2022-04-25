@@ -83,7 +83,7 @@ const bigAge = person.filter( person => person.age>30)
 console.log(bigAge)
 
 //Soru 2: Yukarıdaki diziyi kullanarak filter() metodu ile JavaScript bilen kişiyi getirin.
-
+//Bu çalışmadı tekrar bakacağım
 const knowJs = person.filter(lang => lang.languages === "JavaScript")
 console.log(knowJs)
 
