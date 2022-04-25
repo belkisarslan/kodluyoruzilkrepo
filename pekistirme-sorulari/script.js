@@ -52,3 +52,14 @@ for(index=0; index<50; index++){
         console.log(index)
     }
 }
+
+//FOREACH
+
+//Numbers array'ini kullanarak her elemanının iki fazlasına sahip olan başka bir array oluşturunuz.
+const numbers = [12, 24, 36]; 
+const newNumbers = [];
+
+numbers.forEach((element) => {
+    newNumbers.push(element + 2)
+})
+console.log(newNumbers)
