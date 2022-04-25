@@ -37,3 +37,18 @@ function myFunction (array){
 }
 myFunction(array);
 
+//FOR DÖNGÜSÜ
+
+//Ödev 1: 20 ile 40 arasındaki tüm sayıları konsola yazdırın.
+console.log('20 ile 40 arasındaki tüm sayılar')
+for(index=20; index<=40; index++){
+    console.log(index)
+}
+
+//Ödev 2: 0 ve 50 sayıları arasından tek olanları console'a yazdıralım.
+console.log('0 ile 50 arasındaki tek sayılar')
+for(index=0; index<50; index++){
+    if(index %2 == 1){
+        console.log(index)
+    }
+}
