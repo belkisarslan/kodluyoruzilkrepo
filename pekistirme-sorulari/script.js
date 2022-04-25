@@ -63,3 +63,27 @@ numbers.forEach((element) => {
     newNumbers.push(element + 2)
 })
 console.log(newNumbers)
+
+//FİLTER
+
+const person = [{
+    name: "Adem",
+    age: 25,
+    languages: ["JavaScript", "CSS"],
+  },
+  {
+    name: "Oğuz",
+    age: 33,
+    languages: ["Java", "HTML"],
+    }
+];
+//Soru 1: Yukarıdaki diziyi kullanarak filter() metodu ile yaşı 30'dan büyük olan kişiyi getirin.
+
+const bigAge = person.filter( person => person.age>30)
+console.log(bigAge)
+
+//Soru 2: Yukarıdaki diziyi kullanarak filter() metodu ile JavaScript bilen kişiyi getirin.
+
+const knowJs = person.filter(lang => lang.languages === "JavaScript")
+console.log(knowJs)
+
