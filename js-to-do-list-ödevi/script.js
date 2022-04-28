@@ -42,6 +42,8 @@ function deleteElement(e){
     }
 }
 
+//Burdaki kurduğum yapıya göre getList() yapıp fonksiyonu çağırmam gerekiyor ama çağırdığım zaman newElement() te kurduğum yapı bozuluyor. LocalStorage kısmı ödev içeriğinde bonus olduğu için temel kısımları çalışır konumda bırakıyorum. LocalStorage konusuna tekrar çalışıp döneceğim.
+//Mutlu bir not: Bootstrap toast olayını bu ödevde öğrendim ve çalışıyor :D :D
 function getList(){
     let localList;
     if(localStorage.getItem('localList') === null){
