@@ -4,13 +4,14 @@ const ul = document.querySelector("#list")
 
 
 function newElement(){
+    let item = task.value
     if(task.value == ""){
         let errorToast = new bootstrap.Toast(document.querySelector(".error"));
         errorToast.show();
         console.log("hata")
     }else{
         let liDOM = document.createElement("li")
-        liDOM.innerHTML = `${task.value}<span class="times close">&times;</span>`
+        liDOM.innerHTML = `${item}<span class="times close">&times;</span>`
         ul.appendChild(liDOM);
         task.value = "";
         let successToast = new bootstrap.Toast(document.querySelector(".success"));
@@ -20,19 +21,19 @@ function newElement(){
         })
         liDOM.addEventListener("click", deleteElement)
     }
-    
-    saveLocalList(task)
+    saveLocalList(item)
 }
 
-function saveLocalList(task){
+function saveLocalList(item){
   let localList;
   if(localStorage.getItem('localList') === null){
-      localList = []
-  }else{
-      localList = JSON.parse(localStorage.getItem('localList'))
-  }
-  localList.push(task)
+       localList = []
+   }else{
+       localList = JSON.parse(localStorage.getItem('localList'))
+   }
+  localList.push(item)
   localStorage.setItem('localList', JSON.stringify(localList))
+  
 }
 
 function deleteElement(e){
@@ -48,9 +49,9 @@ function getList(){
     }else{
         localList = JSON.parse(localStorage.getItem('localList'))
     }
-    localList.forEach((task) => {
+    localList.forEach((item) => {
         let liDOM = document.createElement("li")
-        liDOM.innerHTML = `${task.value}<span class="times close">&times;</span>`
+        liDOM.innerHTML = `${item}<span class="times close">&times;</span>`
         ul.appendChild(liDOM);
         task.value = "";
         liDOM.addEventListener("click",function(){
@@ -59,4 +60,5 @@ function getList(){
     })
 
 }
+
 
