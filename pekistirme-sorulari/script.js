@@ -122,7 +122,7 @@ function yeni(){
   }));
   
   for(i=0; i<(kisiler.length); i++){
-    yeniKisiler.push(kisilerMapped.adi_soyadi)
+    yeniKisiler.push(kisilerMapped[i].adi_soyadi)
   }
   console.log(yeniKisiler)
 }
@@ -156,20 +156,41 @@ console.log(styles)
 //Eğer kullanıcı boşluk karakteri girerse veya “İptal” tuşuna basar ise işlemi bitirin.
 //Tüm girilen değerlerin toplamını hesaplayın.
 //Not: 0 bir sayıdır, eğer giriş sıfır ise lütfen programı durdurmayın.
-function sumInput() {
- let sayilar = [];
-  while (true) {
-    let deger = prompt("Lütfen bir sayı giriniz?");
-    // İptal edilmeli mi?
-    if (deger === "" || deger === null || !isFinite(deger)) break;
+//prompt sürekli çalışmasın diye cevabı yorum satırına aldım..
+// function sumInput() {
+//  let sayilar = [];
+//   while (true) {
+//     let deger = prompt("Lütfen bir sayı giriniz?");
+//     // İptal edilmeli mi?
+//     if (deger === "" || deger === null || !isFinite(deger)) break;
   
-    sayilar.push(+deger);
-    }
+//     sayilar.push(+deger);
+//     }
   
-    let toplam = 0;
-    for (let sayi of sayilar) {
-      toplam += sayi;10
-    }
-    return toplam;
+//     let toplam = 0;
+//     for (let sayi of sayilar) {
+//       toplam += sayi;10
+//     }
+//     return toplam;
+// }
+// console.log( sumInput() );
+
+//usAl(x,n) adında bir fonksiyon yazın. Bu fonksiyon x in n üssünü döndersin. Diğer bir deyişle x'i n kadar kendisiyle çarpsın.
+function usAl(x, n) {
+  let sonuc = x;
+
+  for (let i = 1; i < n; i++) {
+    sonuc *= x;
+  }
+
+  return sonuc;
 }
-console.log( sumInput() );
+
+let x = prompt("x?", '');
+let n = prompt("n?", '');
+
+if (n <= 1) {
+  alert(` ${n} için üs alınamamaktadır. 0'dan büyük doğal sayı kullanınız.`);
+} else {
+  alert( usAl(x, n) );
+}
