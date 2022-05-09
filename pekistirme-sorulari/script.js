@@ -87,5 +87,89 @@ const knowJs = person.filter(person => person.languages.includes("JavaScript"))
 knowJs.forEach(myFunction)
 function myFunction(item) {
     console.log(item.name);
+}
+
+//JavaScript.info'dan Çalışmalar
+
+//Dizinin içinde tekrar eden elemanlardan sadece birini alarak diziyi döndürün.
+let kullanicilar = ["Emine", "Muzaffer", "Fatma", "Kanako",
+  "Kanako", "Muzaffer", "Fatma", "Kanako", ":-O"
+];
+function benzersiz(arr) {
+  let sonuc = [];
+
+  for (let str of arr) {
+    if (!sonuc.includes(str)) {
+      sonuc.push(str);
+    }
   }
 
+  return sonuc;
+}
+console.log(benzersiz(kullanicilar))
+
+//Aşağıdaki kullanıcıları isim ve soyisim yazacak şekilde yeni bir dizi oluşturunuz.
+//***burada bir sorun var çözeceğim
+let ahmet = { adi: "Ahmet", soyadi: "Doğtaş", yas: 25, id: 1 };
+let mehmet = { adi: "Mehmet", soyadi: "İstikbal", yas: 30, id: 2 };
+let muzaffer = { adi: "Muzaffer", soyadi: "Bellona", yas:28, id: 3 };
+
+function yeni(){
+    let kisiler = [ahmet, mehmet, muzaffer]
+    let yeniKisiler = []
+    let kisilerMapped = kisiler.map(kisi => ({
+    adi_soyadi: `${kisi.adi} ${kisi.soyadi}`
+  }));
+  
+  for(i=0; i<(kisiler.length); i++){
+    yeniKisiler.push(kisilerMapped.adi_soyadi)
+  }
+  console.log(yeniKisiler)
+}
+yeni()
+
+//kişilerin yaş ortalamalarını hesaplayan bir fonksiyon yazınız.
+let kisiler = [ahmet, mehmet, muzaffer]
+function ortalamaYasAl(users) {
+    return users.reduce((onceki, kullanici) => onceki + kullanici.yas, 0) / users.length;
+}
+console.log(ortalamaYasAl(kisiler))
+
+// 1. styles adında bir dizi oluşturun. İçerisinde “Jazz” ve “Blues” elemanları olsun.
+// 2. “Rock-n-Roll” elemanını sona ekleyin.
+// 3. Ortada bulunan elemanı “Classics” ile değiştirin. Yazacağınız kod tek elemanlı değerler için çalışmalı. 1-3-5-7 gibi
+// 4. Dizinin ilk değerini sil ve göster.
+// 5. Dizinin başlangıcına Rap ve Reggae gibi elemanlar ekleyiniz.
+let styles = ["Jazz", "Blues"];
+styles.push("Rock-n-Roll")
+console.log(styles);
+styles[Math.floor((styles.length - 1) / 2)] = "Classics";
+console.log(styles);
+let ilkDeger = styles.shift();
+console.log(ilkDeger);
+console.log(styles);
+styles.unshift("Rap", "Reggae");
+console.log(styles)
+
+//sumInput() fonksiyonunu aşağıdaki şekilde yazınız:
+//prompt ile kullanıcının değer girmesini sağlayın.
+//Eğer kullanıcı boşluk karakteri girerse veya “İptal” tuşuna basar ise işlemi bitirin.
+//Tüm girilen değerlerin toplamını hesaplayın.
+//Not: 0 bir sayıdır, eğer giriş sıfır ise lütfen programı durdurmayın.
+function sumInput() {
+ let sayilar = [];
+  while (true) {
+    let deger = prompt("Lütfen bir sayı giriniz?");
+    // İptal edilmeli mi?
+    if (deger === "" || deger === null || !isFinite(deger)) break;
+  
+    sayilar.push(+deger);
+    }
+  
+    let toplam = 0;
+    for (let sayi of sayilar) {
+      toplam += sayi;10
+    }
+    return toplam;
+}
+console.log( sumInput() );
