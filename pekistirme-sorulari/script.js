@@ -109,7 +109,6 @@ function benzersiz(arr) {
 console.log(benzersiz(kullanicilar))
 
 //Aşağıdaki kullanıcıları isim ve soyisim yazacak şekilde yeni bir dizi oluşturunuz.
-//***burada bir sorun var çözeceğim
 let ahmet = { adi: "Ahmet", soyadi: "Doğtaş", yas: 25, id: 1 };
 let mehmet = { adi: "Mehmet", soyadi: "İstikbal", yas: 30, id: 2 };
 let muzaffer = { adi: "Muzaffer", soyadi: "Bellona", yas:28, id: 3 };
@@ -156,7 +155,7 @@ console.log(styles)
 //Eğer kullanıcı boşluk karakteri girerse veya “İptal” tuşuna basar ise işlemi bitirin.
 //Tüm girilen değerlerin toplamını hesaplayın.
 //Not: 0 bir sayıdır, eğer giriş sıfır ise lütfen programı durdurmayın.
-//prompt sürekli çalışmasın diye cevabı yorum satırına aldım..
+//*prompt sürekli çalışmasın diye cevabı yorum satırına aldım..
 // function sumInput() {
 //  let sayilar = [];
 //   while (true) {
@@ -176,21 +175,72 @@ console.log(styles)
 // console.log( sumInput() );
 
 //usAl(x,n) adında bir fonksiyon yazın. Bu fonksiyon x in n üssünü döndersin. Diğer bir deyişle x'i n kadar kendisiyle çarpsın.
-function usAl(x, n) {
-  let sonuc = x;
+//*prompt sürekli çalışmasın diye cevabı yorum satırına aldım..
+// function usAl(x, n) {
+//   let sonuc = x;
 
-  for (let i = 1; i < n; i++) {
-    sonuc *= x;
+//   for (let i = 1; i < n; i++) {
+//     sonuc *= x;
+//   }
+
+//   return sonuc;
+// }
+
+// let x = prompt("x?", '');
+// let n = prompt("n?", '');
+
+// if (n <= 1) {
+//   alert(` ${n} için üs alınamamaktadır. 0'dan büyük doğal sayı kullanınız.`);
+// } else {
+//   alert( usAl(x, n) );
+// }
+
+
+//Günlük 1111 şişe süt üreten bir tesisin 9 günlük kümülatif süt üretimini gün gün yazınız.
+let uretim = 0;
+for(i=0; i<=9; i++){
+ for(j=1; j<=9; j++){
+  uretim += 1111;
+  console.log(j + ".gün " +uretim)
+ }
+ break;
+}
+
+
+//Yarıçapı 5 ve 6 olan iki dairenin alanları çarpımını hesaplayınız.
+function daireAlan(r, pi=3.14){
+ return pi*r*r;
+}
+function carp(a1, a2){
+  return a1*a2;
+}
+
+let alan1 = daireAlan(5);
+let alan2 = daireAlan(6);
+let hesaplanan = carp(alan1, alan2);
+console.log("dairelerin alanları toplamı " + hesaplanan);
+
+//[1,2,3,4,5] arrayini parametre alan bir arrow fonksiyonumuz olsun. Bu arrayin sonucu bize yeni bir array döndürsün. Oluşan yeni arraydaki çift sayılar 2,  tek sayılar ise 3 ile çarpılmış olsun.
+const newArray = (nums) => {
+  const newNums = nums.map(e=>{      
+    if(e%2==0){
+      return e*2
+    }else if(e%2==1){
+      return e*3
+    }
+  });
+
+ return newNums 
+}
+console.log(newArray([1,2,3,4,5]))
+
+//Aşağıdaki dizideki tüm pozitif sayıların toplamını bulunuz.
+let yeniDizi = [1, -2, -3, 4, 5, -6];
+let sonuc = yeniDizi.reduce(function(sum, e){
+  if(e >= 0){
+    return sum + e;
+  }else{
+    return sum;
   }
-
-  return sonuc;
-}
-
-let x = prompt("x?", '');
-let n = prompt("n?", '');
-
-if (n <= 1) {
-  alert(` ${n} için üs alınamamaktadır. 0'dan büyük doğal sayı kullanınız.`);
-} else {
-  alert( usAl(x, n) );
-}
+})
+console.log(sonuc)
