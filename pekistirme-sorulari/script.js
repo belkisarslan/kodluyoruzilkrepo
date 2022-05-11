@@ -65,7 +65,8 @@ numbers.forEach((element) => {
 console.log(newNumbers)
 
 //FİLTER
-/*Bir dizimiz var ve bazı ögeleri filtrelemek istiyoruz. Mesela [elma, portakal, muz] sadece [elma] yı alarak orijinal diziyi değiştirmeden yeni bir dizi oluşturmamızı sağlar*/
+/*Bir dizimiz var ve bazı ögeleri filtrelemek istiyoruz. 
+Mesela [elma, portakal, muz] sadece [elma] yı alarak orijinal diziyi değiştirmeden yeni bir dizi oluşturmamızı sağlar*/
 
 const person = [{
     name: "Adem",
@@ -225,7 +226,8 @@ let hesaplanan = carp(alan1, alan2);
 console.log("dairelerin alanları toplamı " + hesaplanan);
 
 //[1,2,3,4,5] arrayini parametre alan bir arrow fonksiyonumuz olsun. Bu arrayin sonucu bize yeni bir array döndürsün. Oluşan yeni arraydaki çift sayılar 2,  tek sayılar ise 3 ile çarpılmış olsun.
-/*MAP Biz dizimiz var ve her bir ögesi işlenerek dönüştürülüyor. Sonuç olarak orijinali değiştirmeden aynı uzunlukta yeni bir dizi elde ederiz. Mesela [elma, portakal, karpuz] yeni dizi[dilim elma, dilim portakal, dilim karpuz]*/
+/*MAP Biz dizimiz var ve her bir ögesi işlenerek dönüştürülüyor. Sonuç olarak orijinali değiştirmeden aynı uzunlukta yeni bir dizi elde ederiz. 
+Mesela [elma, portakal, karpuz] yeni dizi[dilim elma, dilim portakal, dilim karpuz]*/
 const newArray = (nums) => {
   const newNums = nums.map(e=>{      
     if(e%2==0){
@@ -240,7 +242,8 @@ const newArray = (nums) => {
 console.log(newArray([1,2,3,4,5]))
 
 //Aşağıdaki dizideki tüm pozitif sayıların toplamını bulunuz.
-/*REDUCE dizimizin elemanlarından her ögeyi döngü hesaplatarak yeni bir dizi elde ediyoruz.Yeni dizinin tek bir değer elemanı vardır ve orijinal dizi değişmez. Mesela [elma, portakal, karpuz] yeni dizi [elma, portakal ve karpuz dilimlerinden oluşan bir meyve tabağı]*/
+/*REDUCE dizimizin elemanlarından her ögeyi döngü hesaplatarak yeni bir dizi elde ediyoruz.Yeni dizinin tek bir değer elemanı vardır ve orijinal dizi değişmez. 
+Mesela [elma, portakal, karpuz] yeni dizi [elma, portakal ve karpuz dilimlerinden oluşan bir meyve tabağı]*/
 let yeniDizi = [1, -2, -3, 4, 5, -6];
 let sonuc = yeniDizi.reduce(function(sum, e){
   if(e >= 0){
