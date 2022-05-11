@@ -65,6 +65,7 @@ numbers.forEach((element) => {
 console.log(newNumbers)
 
 //FİLTER
+/*Bir dizimiz var ve bazı ögeleri filtrelemek istiyoruz. Mesela [elma, portakal, muz] sadece [elma] yı alarak orijinal diziyi değiştirmeden yeni bir dizi oluşturmamızı sağlar*/
 
 const person = [{
     name: "Adem",
@@ -156,45 +157,48 @@ console.log(styles)
 //Tüm girilen değerlerin toplamını hesaplayın.
 //Not: 0 bir sayıdır, eğer giriş sıfır ise lütfen programı durdurmayın.
 //*prompt sürekli çalışmasın diye cevabı yorum satırına aldım..
-// function sumInput() {
-//  let sayilar = [];
-//   while (true) {
-//     let deger = prompt("Lütfen bir sayı giriniz?");
-//     // İptal edilmeli mi?
-//     if (deger === "" || deger === null || !isFinite(deger)) break;
+/*
+function sumInput() {
+ let sayilar = [];
+  while (true) {
+    let deger = prompt("Lütfen bir sayı giriniz?");
+    // İptal edilmeli mi?
+    if (deger === "" || deger === null || !isFinite(deger)) break;
   
-//     sayilar.push(+deger);
-//     }
+    sayilar.push(+deger);
+    }
   
-//     let toplam = 0;
-//     for (let sayi of sayilar) {
-//       toplam += sayi;10
-//     }
-//     return toplam;
-// }
-// console.log( sumInput() );
+    let toplam = 0;
+    for (let sayi of sayilar) {
+      toplam += sayi;10
+    }
+    return toplam;
+}
+console.log( sumInput() );
+*/
 
 //usAl(x,n) adında bir fonksiyon yazın. Bu fonksiyon x in n üssünü döndersin. Diğer bir deyişle x'i n kadar kendisiyle çarpsın.
 //*prompt sürekli çalışmasın diye cevabı yorum satırına aldım..
-// function usAl(x, n) {
-//   let sonuc = x;
+/*
+function usAl(x, n) {
+  let sonuc = x;
 
-//   for (let i = 1; i < n; i++) {
-//     sonuc *= x;
-//   }
+  for (let i = 1; i < n; i++) {
+    sonuc *= x;
+  }
 
-//   return sonuc;
-// }
+  return sonuc;
+}
 
-// let x = prompt("x?", '');
-// let n = prompt("n?", '');
+let x = prompt("x?", '');
+let n = prompt("n?", '');
 
-// if (n <= 1) {
-//   alert(` ${n} için üs alınamamaktadır. 0'dan büyük doğal sayı kullanınız.`);
-// } else {
-//   alert( usAl(x, n) );
-// }
-
+if (n <= 1) {
+  alert(` ${n} için üs alınamamaktadır. 0'dan büyük doğal sayı kullanınız.`);
+} else {
+  alert( usAl(x, n) );
+}
+*/
 
 //Günlük 1111 şişe süt üreten bir tesisin 9 günlük kümülatif süt üretimini gün gün yazınız.
 let uretim = 0;
@@ -221,6 +225,7 @@ let hesaplanan = carp(alan1, alan2);
 console.log("dairelerin alanları toplamı " + hesaplanan);
 
 //[1,2,3,4,5] arrayini parametre alan bir arrow fonksiyonumuz olsun. Bu arrayin sonucu bize yeni bir array döndürsün. Oluşan yeni arraydaki çift sayılar 2,  tek sayılar ise 3 ile çarpılmış olsun.
+/*MAP Biz dizimiz var ve her bir ögesi işlenerek dönüştürülüyor. Sonuç olarak orijinali değiştirmeden aynı uzunlukta yeni bir dizi elde ederiz. Mesela [elma, portakal, karpuz] yeni dizi[dilim elma, dilim portakal, dilim karpuz]*/
 const newArray = (nums) => {
   const newNums = nums.map(e=>{      
     if(e%2==0){
@@ -235,6 +240,7 @@ const newArray = (nums) => {
 console.log(newArray([1,2,3,4,5]))
 
 //Aşağıdaki dizideki tüm pozitif sayıların toplamını bulunuz.
+/*REDUCE dizimizin elemanlarından her ögeyi döngü hesaplatarak yeni bir dizi elde ediyoruz.Yeni dizinin tek bir değer elemanı vardır ve orijinal dizi değişmez. Mesela [elma, portakal, karpuz] yeni dizi [elma, portakal ve karpuz dilimlerinden oluşan bir meyve tabağı]*/
 let yeniDizi = [1, -2, -3, 4, 5, -6];
 let sonuc = yeniDizi.reduce(function(sum, e){
   if(e >= 0){
@@ -244,3 +250,20 @@ let sonuc = yeniDizi.reduce(function(sum, e){
   }
 })
 console.log(sonuc)
+
+//abc değişkeninde tanımlanmış ifadedeki büyük ve küçük harflerle yazılmış olan "heyecan" kelimesini "mutluluk" kelimesi ile değiştiriniz.
+let abc = "JavaScript heyecan verici bir dildir.Öğrendikçe daha çok HEYECAN vermeye başlar. Heyecanlarınız bol olsun"
+//i büyük küçük harf duyarlılığını kaldırıyor g global olarak değişim sağlıyor.
+let abcYeni = abc.replace(/heyecan/ig, "mutluluk")
+console.log(abcYeni)
+console.log(abc)
+
+//Faktöriyel alma fonksiyonu
+function faktor(sayi){
+  let sonuc = 1;
+  for(let i=1; i<=sayi; i++){
+   sonuc *= i
+  }
+  return sonuc
+}
+console.log("faktöriyel değeri => " + faktor(4))
