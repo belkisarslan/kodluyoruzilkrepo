@@ -270,3 +270,27 @@ function faktor(sayi){
   return sonuc
 }
 console.log("faktöriyel değeri => " + faktor(4))
+
+//Dizinin içindeki tekrar etmeyen elemanları bulun.
+//JavaScripte aşık olabilirim <3 :D
+function lonelyinteger(a){
+  let sonuc = a.filter(function(num){
+    return a.indexOf(num) === a.lastIndexOf(num)
+  })
+  let lonel = sonuc.map(function(){
+    return sonuc[i++]
+  })
+  return lonel
+}
+console.log(lonelyinteger([1,2,1,3,3,4,5,4,7]))
+
+//Aşağıdaki paragrafta birden fazla geçen kelimeleri bulunuz
+let prg = "Bugün hava çok güzel. Bu güzel günde hep beraber javascript çalışalım. Çalışalım ki her şey daha da güzel olsun."
+let sub = "güzel"
+let count = 0;
+let xindex = prg.indexOf(sub)
+while(xindex !== -1){
+  count ++;
+  xindex = prg.indexOf(sub, xindex +1);
+}
+console.log(count)
