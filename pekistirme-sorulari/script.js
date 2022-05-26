@@ -294,3 +294,25 @@ while(xindex !== -1){
   xindex = prg.indexOf(sub, xindex +1);
 }
 console.log(count)
+
+//Sınıflandırma ile bir dikdörtgen tanımlayın ve bu dikdörtgenin alanın hesaplayın. 
+//Daha sonra extends ve super anahtar kelimelerini kullanarak dikdörtgen sınıfındaki işlemleri kare sınıfına uygulamaya çalışın.
+
+class Rectangle {
+  constructor(w, h) {
+      this.w = w;
+      this.h = h;
+  }
+}
+Rectangle.prototype.area = function(){
+    return (this.w * this.h);
+}
+class Square extends Rectangle{
+  constructor(s){
+   super(s, s)    
+  }
+}
+let areaR = new Rectangle(3, 4)
+let areaS = new Square(3);
+console.log("dikdörtgenin alanı: ",areaR.area())
+console.log("karenin alanı: ",areaS.area())
