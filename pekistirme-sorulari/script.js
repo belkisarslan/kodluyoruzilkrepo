@@ -316,3 +316,14 @@ let areaR = new Rectangle(3, 4)
 let areaS = new Square(3);
 console.log("dikdörtgenin alanı: ",areaR.area())
 console.log("karenin alanı: ",areaS.area())
+
+//Girilen bir tarihin hangi güne geldiğini hesaplamaya çalışalım.
+function getDayName(dateString) {
+  let dayName;
+  let days =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  let date = new Date(dateString)
+  dayName = days[date.getDay()]
+  return dayName;
+}
+//Bugünün tarihini atıp deneyelim.
+console.log(getDayName('2022/06/02'))
