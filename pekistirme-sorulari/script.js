@@ -327,3 +327,16 @@ function getDayName(dateString) {
 }
 //Bugünün tarihini atıp deneyelim.
 console.log(getDayName('2022/06/02'))
+
+//Düzenli ifadeler kullanarak girilen kelimenin aynı harfle başlayıp aynı harfle bitmesi durumunda true, 
+//farklı harfle bitmesi durumunda false döndüren formülü yazınız.
+//'^' başlangıçla eşleştir
+//'\1' ilk yakalama grubuna referans
+//'$' konu sonuyla eşleşme
+function regexVar() {
+  let re = /^([aeiou]).+\1$/;
+  return re;
+}
+re = regexVar();
+console.log("araba kelimesi " + re.test('araba'))
+console.log("bisiklet kelimesi " + re.test('bisiklet'))
