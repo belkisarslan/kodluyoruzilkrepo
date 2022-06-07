@@ -340,3 +340,15 @@ function regexVar() {
 re = regexVar();
 console.log("araba kelimesi " + re.test('araba'))
 console.log("bisiklet kelimesi " + re.test('bisiklet'))
+
+//Düzenli ifadeler kullanarak Mr. Mrs. Ms. Dr. Er. unvanlarından sonra nokta ve isim gelmesinin kontrolünü yapınız.
+//'|' veya demek
+function regexLet() {
+  let reg = /^(Mr|Mrs|Ms|Dr|Er)(\.)([a-zA-Z])+$/;
+  return reg;
+}
+reg = regexLet();
+console.log("Dr.Ahmet "+reg.test('Dr.Ahmet'))
+console.log("Dr#Ahmet "+reg.test('Dr#Ahmet'))
+//Formül arasında boşluk bıraktığımızda bu işlem true oluyor.
+console.log("Dr .Ahmet "+reg.test('Dr .Ahmet'))
