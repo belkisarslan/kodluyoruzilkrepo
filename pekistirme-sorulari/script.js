@@ -352,3 +352,10 @@ console.log("Dr.Ahmet "+reg.test('Dr.Ahmet'))
 console.log("Dr#Ahmet "+reg.test('Dr#Ahmet'))
 //Formül arasında boşluk bıraktığımızda bu işlem true oluyor.
 console.log("Dr .Ahmet "+reg.test('Dr .Ahmet'))
+
+//Çevresi ve alanı verilen dikdörtgenin uzun ve kısa kenar uzunluklarını bulan bir fonksiyon yazınız.
+function sides(a, p) {
+  const root = Math.sqrt((p**2 - (16*a)))
+  return [((p - root)/4), ((p + root)/4)]
+}
+console.log(sides(15, 16))
